@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 swipeRefresh.isRefreshing = false
+                view?.evaluateJavascript("window.isAroostookApp = true", null)
             }
         }
 
